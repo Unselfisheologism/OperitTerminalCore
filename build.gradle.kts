@@ -3,7 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
     id("org.jetbrains.kotlin.plugin.serialization")
-    id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
+    id("org.jetbrains.kotlin.plugin.compose")
 }
 
 android {
@@ -52,9 +52,7 @@ android {
         aidl = true
         compose = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.8"
-    }
+
     packaging {
         resources {
             excludes += setOf(
@@ -65,8 +63,6 @@ android {
                 "META-INF/NOTICE.txt"
             )
         }
-    }
-    packaging {
         jniLibs {
             useLegacyPackaging = true
         }
